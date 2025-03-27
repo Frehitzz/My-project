@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JACK EN POY GAME</h1>
+            <div class="container2">
+                <div class="leftside">
+                    <h3>You</h3>
+                    <p id="display"></p>
+                </div>
+                <div class="rightside">
+                    <h3>Computer</h3>
+                    <p id="pc-display"></p>
+                </div>
+            </div>
+        <P id="result">PICK ONE:</P>
+
+        <div class="buttons">
+            <div id="choice-btn"></div>
+        <button onclick="rockbutton()">ROCK</button>
+        <button onclick="paperbutton()">PAPER</button>
+        <button onclick="scissorbutton()">SCISSOR</button>
+        <button id="reset" onclick="resetbtn()" style="display: none;">TRY AGAIN</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

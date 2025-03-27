@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.container2{
+    display: flex;
+    gap: 200px;
+}
+
+.leftside, .rightside{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+}
+
+
+
+h1{
+    margin-bottom: 50px;
+}
