@@ -1,0 +1,110 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.register{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+}
+
+i{
+    font-size: 30px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.register-button{
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.bottom-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.or{
+    font-size: 30px;
+}
+
+.icons{
+    
+    width:30vh;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#gl, #fb{
+    padding: 20px;
+    outline: 2px solid grey;
+    border-radius: 10px;
+}
+
+.signin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+/*--------------------------------------------*/
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.recover{
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.signin-button{
+    border: none;
+    border: 1px solid black;
+    width: 90%;
+    margin-top: 20px;
+    border-radius:10px;
+}
+
+.bottom-container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title2{
+    font-size: 50px;
+}
