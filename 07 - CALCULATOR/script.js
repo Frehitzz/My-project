@@ -2,10 +2,12 @@ const display = document.getElementById("display");
 
 display.value = "0";
 
+// to clear all or delte all
 function clearAll(){
     display.value = "0";
 }
 
+// will delete the previous number
 function deleteLast() {
    let current = display.value;
     // Only slice if not already "0"
