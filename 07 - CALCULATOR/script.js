@@ -32,6 +32,7 @@ function todisplay(input){
 
 }
 
+// basic use of percentage only
 function calculatePercentage() {
     try {
         display.value = eval(display.value) / 100;
@@ -40,6 +41,7 @@ function calculatePercentage() {
     }
 }
 
+// calculate the result
 function calculate(){
     try{
         display.value = eval(display.value);

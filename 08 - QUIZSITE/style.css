@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-category{
+    font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container{
+    width: 500px;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category{
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+
+.category-button{
+    width: 200px;
+    height: 100px;
+    
+    font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+}
+
+.category-button.selected{
+  background-color: pink;
+}
+
+.numberof{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.numberof-button{
+    width: 50px;
+    height: 30px;
+    font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.numberof-button.selected{
+  background-color: violet;
+}
+
+.startbutt-container{
+    margin-bottom: 40px;
+}
+
+.start-button{
+    width:100px;
+    height: 40px;
+    font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+h3{
+    font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*QUIZ*/
+
+.container-quiz{
+  width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers-quiz{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.quiz-button{
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.submit-butt{
+  width:100px;
+  height:30px;
+}

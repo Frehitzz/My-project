@@ -1,4 +1,4 @@
 **TASK LIST**
-- [] document it and learn it
-- [] fix the ui of the display
-- [] fix the percentage
+- [x] document it and learn it
+- [x] fix the ui of the display
+- [x] fix the percentage
