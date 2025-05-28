@@ -32,18 +32,21 @@ body{
 }
 
 .category-button{
-    width: 200px;
-    height: 100px;
-    
-    font-family: "Public Sans", sans-serif;
+  width: 200px;
+  height: 100px;
+  font-family: "Public Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: large;
+  background-color: rgb(231, 231, 231);
+  border: none;
+  border-radius: 10px;
 }
 
 .category-button.selected{
-  background-color: pink;
+  background-color: rgb(199, 227, 253);
+  border: 2px solid rgb(134, 195, 253);
 }
 
 .numberof{
@@ -64,7 +67,8 @@ body{
 }
 
 .numberof-button.selected{
-  background-color: violet;
+  background-color: rgb(86, 169, 247);
+  border: 2px solid rgb(134, 195, 253);
 }
 
 .startbutt-container{
@@ -78,6 +82,9 @@ body{
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  background-color: rgb(144, 159, 245);
+  border: none;
+  border-radius: 8px;
 }
 
 h3{
@@ -112,9 +119,21 @@ h3{
   width: 300px;
   display: flex;
   align-items: center;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(231, 231, 231);
+}
+
+.quiz-button.selected{
+  background-color: rgb(199, 227, 253);
+  border: 2px solid rgb(134, 195, 253);
 }
 
 .submit-butt{
-  width:100px;
-  height:30px;
+  width:140px;
+  height:40px;
+  background-color: rgb(144, 159, 245);
+  border: none;
+  border-radius: 8px;
 }
+
