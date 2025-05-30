@@ -19,8 +19,30 @@ function Startbutt(){
       document.querySelector(".container-quiz").style.display = "none";
       return;
     }
+    // to find the category from the question array
+    const categoryObj = questions.find(cat => cat.category === selectedCategory)
+
+    //to store the number of how many questions you want
+    const numofQue = parseInt(document.querySelector('.numberof-button')?.textContent);
+
+    //randomized and select question from the correct category
+    const shuffled = [...categoryObj].slice(() => Math.random() - 0.5);
+    //select a number of question absed on the user want
+    const selectedQuestions = shuffled.slice(0,numofQue);
+
+    //to show the question and answer
+
+
 }
 
+function displayQuestion(currentQuestion, questionIndex, totalQuestions){
+    //display the questions
+    document.querySelector('.Questions').textContent = currentQuestion.question;
+
+    const answerButtons = document.querySelector('.quiz-button');
+  
+}
+   
 //selection of category
 document.querySelectorAll('.category-button').forEach(btn => {
   btn.addEventListener('click', function() {

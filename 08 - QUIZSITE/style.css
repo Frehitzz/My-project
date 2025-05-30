@@ -137,3 +137,13 @@ h3{
   border-radius: 8px;
 }
 
+.container-quiz, .question-count {
+  position: relative;
+}
+
+.question-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
