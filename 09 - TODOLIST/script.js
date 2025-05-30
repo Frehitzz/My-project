@@ -21,6 +21,20 @@
 
 const todoList = [];
 
+function rendertodo(){
+     let todohtml  = '';
+for(let i = 0;i < todoList.length;i++){
+        const Lists = todoList[i];
+        const html = `
+        <p>${Lists}
+        <button onclick="todoList.splice(${i},1);rendertodo();">DELETE</button>
+        </p>
+        `;
+    todohtml += html;
+}
+document.querySelector('.task-lists').innerHTML = todohtml;
+
+}
 
 function Addbutton(){
     const input = document.querySelector('.text');
@@ -29,13 +43,8 @@ function Addbutton(){
     todoList.push(listName);
     input.value = ' ';
 
-    let todohtml  = '';
-for(let i = 0;i < todoList.length;i++){
-    const Lists =   todoList[i];
-    const html = `<p>${Lists}</p>`;
+    rendertodo();
+}
 
-    todohtml += html;
-}
-document.querySelector('.task-lists').innerHTML = todohtml;
-}
+
 
