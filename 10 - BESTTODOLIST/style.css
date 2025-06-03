@@ -9,6 +9,10 @@ body{
   align-items: center;
 }
 
+.container{
+  width: 30%;
+}
+
 .title{
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -56,6 +60,7 @@ body{
   font-size: 15px;
   font-weight: 500;
   font-style: normal;
+  color: grey;
 }
 
 .completed-count{
@@ -63,4 +68,45 @@ body{
   font-size: 15px;
   font-weight: 500;
   font-style: normal;
+  color: gray;
+}
+
+.added-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Edu SA Hand", cursive;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.mycheck {
+  margin-right: 15px;
+  transform: scale(1.3);
+}
+
+.namedate {
+  flex-grow: 1;
+  display: flex;  
+  align-items: center;
+}
+
+.task-info {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.due-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.delete-btn {
+  margin-left: auto;
+  cursor: pointer;
+  padding-left: 15px;
 }
