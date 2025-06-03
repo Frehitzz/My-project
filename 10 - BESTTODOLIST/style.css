@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body{
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.calendar-container {
+  position: relative;
+  display: inline-block;
+}
+.calendar-open{
+    display: none;
+    position: absolute;
+    bottom: 100%;
+}
+
+.calendar-open.show {
+    display: block;
+    position: absolute;
+}
+
+#deadline-button{
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+#add-button{
+  font-size: 30px;
+}
+
+.input-field{
+  width: 300px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  font-family: "Edu SA Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.remaining-count{
+  font-family: "Edu SA Hand", cursive;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.completed-count{
+  font-family: "Edu SA Hand", cursive;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+}
