@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="title">Add todo:</h2>
-        <input type="text" placeholder="Task Name" class="input-field">
+        <h2 class="title">Add Tasks:</h2>
+        <input type="text" id="task-input" class="input-field" required>
         
         <div class="calendar-container">
             <span class="calendar-btn" onclick="opendate()">
@@ -25,12 +25,19 @@
             </div>
         </div>
          <p class="remaining-count"></p><!--put here the task counter-->
-        <div class="task-list">
-            <!--put here the task that added-->
+
+        <div class="task-list-container">
+            <div class="task-list">
+                <!--put here the task that added-->
+            </div>
         </div>
-        <p class="completed-count">Completed task:</p>
-        <div class="completed-list">
-            <!--put here the completed task that added-->
+
+        <div class="completed-count"></div>
+
+        <div class="completed-list-container">
+            <div class="completed-list">
+                <!--put here the completed task that added-->
+            </div>
         </div>
        
     </div>
