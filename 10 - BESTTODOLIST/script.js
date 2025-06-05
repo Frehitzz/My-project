@@ -19,14 +19,15 @@ function display(){
         const Listobj = taskList[i];
         const { name } = Listobj;
         const { dueDate } = Listobj;
-
+        //animation
+        const animateClass = (i === taskList.length - 1) ? ' animate' : '';
         const htmlliteral = `
-        <div class="added-task">
-            <input type="checkbox" class="mycheck">
+        <div class="added-task${animateClass}">
+            <input type="checkbox" class="mycheck" onclick="completeTaskfunct(${i})">
             <div class="namedate">
             <p class="task-info">${name}<br><span class="due-date">${dueDate}</span></p>
             </div>
-            <div class="delete-btn">
+            <div class="delete-btn" onclick="deleteTask(${i})">
             <i class="fa-solid fa-x"></i>
             </div>
         </div>
@@ -34,7 +35,69 @@ function display(){
         displayhtml += htmlliteral;
     }
     document.querySelector('.task-list').innerHTML = displayhtml;
+     // Remove the animation class after animation completes
+    const lastTask = document.querySelector('.added-task.animate');
+    if (lastTask) {
+        setTimeout(() => {
+            lastTask.classList.remove('animate');
+        }, 500); // match animation duration
+    }
+
+    //for completed task
+    let completecount = '';
+    let completedhtml = '';
+    completecount += `
+    <div class="counter-complete">
+    <p>Completed Task: ${completeTask.length}</p>
+    <span onclick="showdonetask()">
+    <i id="iconeye" class="fa-solid fa-eye-slash"></i>
+    </span
+    </div>
+    `;
+    document.querySelector('.completed-count').innerHTML = completecount;
+    for(let i = 0; i < completeTask.length; i++){
+        const { name, dueDate } = completeTask[i];
+        
+        completedhtml += `
+        <div class="completed-task">
+            <input type="checkbox" class="mycheck" onclick="uncompleteTask(${i})" checked>
+            <div class="namedate">
+            <p class="completed-task-info"><span style="text-decoration-line: line-through; text-decoration-style: double;">${name}</span><br><span class="due-date">${dueDate}</span></p>
+            </div>
+            <div class="delete-btn" onclick="deletecompleteTask(${i})">
+                <i class="fa-solid fa-x"></i>
+            </div>            
+        </div>
+        `;
+    }
+
+    document.querySelector('.completed-list').innerHTML = completedhtml;
 }
+
+function completeTaskfunct(index){
+    completeTask.push(taskList[index]);
+    taskList.splice(index, 1);
+    display()
+}
+
+function uncompleteTask(index){
+    taskList.push(completeTask[index]);
+    completeTask.splice(index, 1);
+    display();
+}
+
+function deleteTask(index){
+    taskList.splice(index, 1);
+    display();
+}
+
+function deletecompleteTask(index){
+    completeTask.splice(index, 1);
+    display();
+}
+
+
+
 
 function addbutton(){
     const textinput = document.querySelector('.input-field');
@@ -53,6 +116,21 @@ function addbutton(){
     display();
     opendate();
 
+}
+
+function showdonetask() {
+    const container = document.querySelector('.completed-list-container');
+    const icon = document.getElementById('iconeye');
+
+    container.classList.toggle('show'); // toggles visibility class
+
+    if (container.classList.contains('show')) {
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    } else {
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    }
 }
 
 
