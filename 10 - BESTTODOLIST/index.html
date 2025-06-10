@@ -9,20 +9,24 @@
 </head>
 <body>
     <div class="container">
+        <div class="popupmess">
+        Please put a task first
+        </div>
         <h2 class="title">Add Tasks:</h2>
+        <div class="input-buttons">
         <input type="text" id="task-input" class="input-field" required>
-        
         <div class="calendar-container">
             <span class="calendar-btn" onclick="opendate()">
                  <i id="deadline-button" class="fa-solid fa-calendar-days"></i>
             </span>
-        <span onclick="addbutton()">
+            <span onclick="addbutton()">
             <i id="add-button" class="fa-solid fa-square-plus"></i>
-        </span>
+            </span>
         
-            <div class="calendar-open">
+        <div class="calendar-open">
                 <input type="date" class="calendardate">
-            </div>
+        </div>
+        </div>
         </div>
          <p class="remaining-count"></p><!--put here the task counter-->
 

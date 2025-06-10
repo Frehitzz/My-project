@@ -8,6 +8,7 @@ function opendate(){
     if (popup.classList.contains('show')){
         document.querySelector('.calendardate').focus();
     }
+
 }
 
 function display(){
@@ -19,6 +20,7 @@ function display(){
         const Listobj = taskList[i];
         const { name } = Listobj;
         const { dueDate } = Listobj;
+
         //animation
         const animateClass = (i === taskList.length - 1) ? ' animate' : '';
         const htmlliteral = `
@@ -46,6 +48,7 @@ function display(){
     //for completed task
     let completecount = '';
     let completedhtml = '';
+    
     completecount += `
     <div class="counter-complete">
     <p>Completed Task: ${completeTask.length}</p>
@@ -72,6 +75,7 @@ function display(){
     }
 
     document.querySelector('.completed-list').innerHTML = completedhtml;
+
 }
 
 function completeTaskfunct(index){
@@ -101,21 +105,32 @@ function deletecompleteTask(index){
 
 function addbutton(){
     const textinput = document.querySelector('.input-field');
-    const addedtask = textinput.value;
+    const addedtask = textinput.value.trim();
+
+    if(addedtask === ""){
+        const toast = document.querySelector('.popupmess');
+        toast.classList.add("show");
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 2000);
+        return;
+    }
 
     const calendarinput = document.querySelector('.calendardate');
     const deadline = calendarinput.value;
 
-    taskList.push({
+        taskList.push({
         name: addedtask,
         dueDate: deadline
     });
-    textinput.value = ' ';
-    calendarinput.value = ' ';
+    textinput.value = '';
+    calendarinput.value = '';
 
     display();
-    opendate();
 
+    // for closing the date input always
+    const popup = document.querySelector('.calendar-open');
+    popup.classList.remove('show');
 }
 
 function showdonetask() {
@@ -132,5 +147,6 @@ function showdonetask() {
         icon.classList.add('fa-eye-slash');
     }
 }
+
 
 
